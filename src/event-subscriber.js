@@ -7,12 +7,8 @@
   module.service('eventSubscriber', ['$rootScope', function($rootScope) {
     var listOfSubscribers = {};
     var innerCallback = function(event, data) {
-      angular.forEach(listOfSubscribers[event.name], function(callback, key) {
-        if(!data || !key || (data && data == key)) {
-          callback(event, data);
-        } else if (key == 'undefined' && data){
-          callback(event, data);
-        }
+      angular.forEach(listOfSubscribers[event.name], function(callback) {
+        callback(data);
       });
     };
 
