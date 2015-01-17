@@ -1,0 +1,38 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular event subscriber - Example</title>
+  </head>
+  <body data-ng-app="angularEventSubscriberApp">
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active">
+            <a data-ng-href="#/">Home</a>
+          </li>
+          <li><a ng-href="#/about">About</a></li>
+        </ul>
+        <h3 class="text-muted">Angular event subscriber - Example</h3>
+      </div>
+
+      <div data-ng-view=""></div>
+    </div>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/about.js"></script>
+    <script src="src/event-subscriber.js"></script>
+    <!-- endbuild -->
+</body>
+</html>
